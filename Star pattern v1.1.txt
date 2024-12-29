@@ -1,0 +1,21 @@
+while True:
+    e=int(input('''Want to print star pattern
+press
+1.Start
+2.Exit
+'''))
+    if e==1:
+        a=int(input("How many row you want to create: "))
+        d=int(input('''select star direction:
+                    1.decreasing
+                    0.increasing
+                    '''))
+        c=bool(d)
+        if c==True:
+            for i in range((a+1),0,-1):
+                print("*"*i)
+        elif c==False:
+            for i in range(a+1):
+                print('*'*i)
+    else:
+        break

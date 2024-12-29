@@ -1,0 +1,35 @@
+import random
+l=['Stone','Paper','Sessor']
+ccount=0
+while True:
+    uinput=int(input('''Is you want to play the stone ,papper and sessor game
+          type number from following:
+          1.Yes
+          2.No | Exit
+          '''))
+    while ccount<=4:
+        cchoice=random.choice(l)
+        if uinput==1:
+            uchoice=input('''Enter your choice from following
+                    type word from following:
+                    1.Stone
+                    2.Paper
+                    3.Sessor
+                    ''')
+            if uchoice==cchoice:
+                print("You win the game.")
+                print(cchoice," is guss by computer.")
+                ccount=ccount+1
+                print("Computer score is: ",ccount)
+                ucount=ucount+1
+                print("Player score is: ",ucount)
+            else:
+                print("Computer win the game.")
+                print(cchoice," is guss by computer.")
+                ccount=ccount+1
+                print("Computer score is: ",ccount)
+        else:
+            break
+    else:
+        print("Game over.")
+        
