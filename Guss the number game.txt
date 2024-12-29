@@ -1,0 +1,13 @@
+#guss the number game
+import random
+cinput=random.randrange(0,101)
+while True:
+    uinput=int(input("Guss the number: "))
+    print("Computer guss the number is: ",cinput)
+    if uinput>cinput:
+        print("You guss the number is too high.")
+    elif uinput<cinput:
+        print("You guss the number is too low.")
+    else:
+        print("You guss the currect number.")
+        break

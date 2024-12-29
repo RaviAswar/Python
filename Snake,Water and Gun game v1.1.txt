@@ -1,0 +1,60 @@
+import random
+list1=['snake','water','gun']
+ucount=0
+ccount=0
+while True:
+    g=int(input('''Would you want to play
+snake,water,gun game
+type 1 for Yes
+     2 for No | Exit
+     '''))
+    
+    if g==1:
+        for t in range(7):
+            user=input('''Enter your choice from following type
+     snake
+     water
+     gun
+    ''')
+            computer=random.choice(list1)
+            print(computer)
+            if user==computer:
+                print('Game is tie')
+                ucount=ucount+1
+                ccount=ccount+1
+                print(ucount,' is scored by you.')
+                print(ccount,' is scored of computer.')
+            elif user=='snake' and computer=='water':
+                print('you won the game.')
+                ucount+=1
+                print(ucount,' is scored by you.')
+            elif user=='snake' and computer=='gun':
+                print('Computer won the game')
+                ccount=ccount+1
+                print(ccount,' is scored of computer.')
+            elif user=='water' and computer=='gun':
+                print('you won the game.')
+                ucount+=1
+                print(ucount,' is scored by you.')
+            elif user=='water' and computer=='snake':
+                print('Computer won the game')
+                ccount=ccount+1
+                print(ccount,' is scored of computer.')
+            elif user=='gun' and computer=='snake':
+                print('you won the game.')
+                ucount+=1
+                print(ucount,' is scored by you.')
+            elif user=='gun' and computer=='water':
+                print('Computer won the game')
+                ccount=ccount+1
+                print(ccount,' is scored of computer.')
+            else:
+                print('Invalid')
+        if ucount>ccount:
+            print('---***you won the game.***---')
+            print(ucount,' is scored by you.')
+        else:
+            print('---***Computer won the game.***---')
+            print(ccount,' is scored of computer.')
+    else:
+        break

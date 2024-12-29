@@ -1,0 +1,24 @@
+import random
+count=9
+while True:
+    uin=int(input('''You want to play guss the number game.
+                1.Yes
+                2.No | Exit
+                '''))
+    print("Enter your guss number between 0 to 100")
+    while count>0:
+        counum=random.randrange(0,101)
+        if uin==1:
+            uinnum=int(input())
+            print("Enter again your guss number number: ")
+            if uinnum>counum:
+                print("You guss number is too high")
+            elif uinnum<counum:
+                print("You guss number is too low")
+            else :
+                print("You guss number is equal to computer number")
+        else:
+            break
+        count=count-1
+        print(count," gusses left")
+    print("Game over")

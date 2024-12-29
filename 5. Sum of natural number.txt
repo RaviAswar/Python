@@ -1,0 +1,7 @@
+def sn(n):
+    if n==1:
+        return (n)
+    else:
+        return (n)+sn(n-1)
+num=int(input("Enter any number: "))
+print(f"Sum of natural number {num} is {sn(num)}")
